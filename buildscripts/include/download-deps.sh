@@ -47,6 +47,9 @@ if [ ! -d lua ]; then
 		tar -xz -C lua --strip-components=1
 fi
 
+# dovi (libdovi — Dolby Vision RPU parser)
+[ ! -d dovi ] && git clone --depth 1 --branch $v_dovi https://github.com/quietvoid/dovi_tool.git dovi
+
 [ ! -d libplacebo ] && git clone --depth 1 --branch v$v_libplacebo --recurse-submodules https://code.videolan.org/videolan/libplacebo.git libplacebo
 
 # mpv
